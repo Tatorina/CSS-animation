@@ -187,7 +187,7 @@ h6 {
     border-radius: 13px 37px 8px 0px;
     border-left: 39px solid #ffc000;
     border-bottom: 9px solid transparent;
-    
+    cursor: pointer;
 }
 
 .ear__right:hover {
@@ -225,7 +225,7 @@ h6 {
 
 
 
-.soks{
+.arm__soks{
     height: 0;
     width: 18px;
     border-top: 15px solid #fff;
@@ -236,7 +236,7 @@ h6 {
     left: -1px;
 }
 
-.paw__first {
+.arm__paw {
     position: relative;
     left: -1.1px;
     top: -25px;
@@ -275,38 +275,90 @@ h6 {
     transform: rotate(-5deg);
 }
 
-.soks_2{
+
+
+.leg__soks{
     height: 0;
     width: 30px;
-    border-top: 55px solid #ffc000;
+    border-top: 60px solid #ffc000;
     border-left: 4px solid transparent;
     border-right: 12px solid transparent;
     position: relative;
-    top: -15px;
+    top: -20px;
     left: 24px;
     z-index: 3;
+    cursor: pointer;
+    transform-origin:top ;
+}
+/*
+.leg__soks:hover{
+  
+  animation: leg-paw 2s ease-in-out infinite;
+  animation-direction: alternate;
+}
+*/
+@keyframes leg-paw {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(25deg);
+  }
 }
 
-.paw__second {
-    position: relative;
-    left: 31.9px;
-    top: -32px;
-    width: 27px;
-    height: 18px;
-    background: #fff;
-    display: block;
-    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
-    border-radius: 0% 52% 38% 85%;
-    transform-origin: 0;
-    transform: rotate(74deg);
-    z-index: 4;
+.leg__paw {
+  position: relative;
+  left: 3.9px;
+  top: -18px;
+  width: 27px;
+  height: 18px;
+  background: #fff;
+  display: block;
+  -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+  border-radius: 0% 52% 38% 85%;
+  transform-origin: 0;
+  transform: rotate(74deg);
+  z-index: 4;
 }
 
-.face {}
+.face {
+  position: relative;
+}
 
-.eye {}
+._left {
+  position: absolute;
+  top: 29px;
+  left: 13px;
+}
+._right {
+  position: absolute;
+  top: 11px;
+  left: 32px;
+ 
+}
 
-.nose {}
+.eye {
+  display: block;
+  width: 17px;
+  height: 11px;
+  border:solid 2px rgb(68, 51, 51);
+  border-color:rgb(68, 51, 51) transparent transparent transparent;
+  border-radius: 51%/10px 10px 0 0;
+   transform: rotate(135deg)
+}
+
+.nose{
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 35px;
+  transform: rotate(-45deg);
+  width: 8px;
+  height: 5px;
+  border-radius: 40% 40% 100% 100%;
+  background-color: rgb(199, 120, 94);
+}
+
 
 .speck{
     position: absolute;
@@ -407,11 +459,11 @@ h6 {
   }
 
   @keyframes tail {
-    6.6666666667% {
-      transform: rotate(-5deg);
+    0% {
+      transform: rotate(3deg);
     }
     10% {
-      transform: rotate(10deg);
+      transform: rotate(-2deg);
     }
     16.6666666667% {
       transform: rotate(-5deg);
